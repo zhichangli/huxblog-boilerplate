@@ -16,7 +16,7 @@ tags:
 [Find-Sec-Bugs](https://github.com/find-sec-bugs/find-sec-bugs) 是一款FindBugs的插件，专用来对代码进行白盒安全扫描，除了保留FindBugs原有扫描模式外，还创新性提出了Taint Analysis方式 , 用作者的话来说 "but before my contribution almost all taint sinks were reported in practice"
 
 
-目前国内关于find-sec-bugs的中文文档不多，因工作需要翻译了一篇，时间紧急，略粗糙，抛砖引玉
+目前国内关于find-sec-bugs的中文文档不多，因工作需要翻译了一篇，时间仓促，略粗糙，抛砖引玉
 
 
 > 英文原链接：[TAINT ANALYSIS ADDED TO FINDBUGS](https://www.ysofters.com/2015/08/31/taint-analysis-added-to-findbugs/)
