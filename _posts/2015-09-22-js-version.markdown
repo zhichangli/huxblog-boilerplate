@@ -1,16 +1,16 @@
 ---
 layout:     post
-title:      "Example Post"
-subtitle:   "ES5, ES6, ES2016, ES.Next: What's going on with JavaScript versioning?"
-date:       2015-09-22
-author:     "Hux"
+title:      "TAINT ANALYSIS ADDED TO FINDBUGS"
+subtitle:   "there was some effort to reduce false positives, but before my contribution almost all taint sinks were reported in practice"
+date:       2017-03-14
+author:     "Lee"
 header-img: "img/h3xstrem.png"
 tags:
-    - JAVA开发
-    - 安全
-    - Unity3D
-    - 前端
-    - 翻译
+    - FindBugs
+    - Find-Sec-Bug
+    - Injection
+    - Taint Analysis
+    - Sinks
 ---
 
 
