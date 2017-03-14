@@ -22,7 +22,7 @@ tags:
 > 英文原链接：[TAINT ANALYSIS ADDED TO FINDBUGS](https://www.ysofters.com/2015/08/31/taint-analysis-added-to-findbugs/)
 
 After finishing hard-coded passwords detector, I have focused on improving the detection of the most serious security bugs, which could be found by static taint analysis.
->当完成硬编码密码检测器之后，我致力于通过通过静态污染分析的方法提高对最严重安全漏洞的检测
+>当完成硬编码密码检测器之后，我致力于通过使用静态污染分析的方法提高对最严重安全漏洞的检测能力
 
 SQL injection, OS command injection and Cross-site scripting (XSS)are placed as top first, second and fourth in CWE Top 25 most dangerous software errors (while well-known buffer overflow, not applicable to Java, is placed third)
 >SQL injection, OS command injection and Cross-site scripting (XSS) 这些攻击手段在CWE Top25 最危险的软件错误中分别排名第一，第二和第四，而知名的缓冲区溢出攻击排名第三
