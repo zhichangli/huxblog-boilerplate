@@ -4,7 +4,7 @@ title:      "TAINT ANALYSIS ADDED TO FINDBUGS"
 subtitle:   "there was some effort to reduce false positives, but before my contribution almost all taint sinks were reported in practice"
 date:       2017-03-14
 author:     "Lee"
-header-img: "img/home-bg-o.jpg"
+header-img: "img/taint-bg.png"
 tags:
     - FindBugs
     - Find-Sec-Bug
