@@ -37,16 +37,16 @@ FindBugs already has detectors for some kinds of injections, but many bugs is mi
 >FindBugs 已经有一些针对注入攻击的检测器，但因为流分析的不够充分，未知的污染源和sinks 规则以及针对零可能性的误报（虽然有一些）等问题而错过了很多漏洞
 
 In contrast, the aim of bug detectors in FindSecurityBugs is to be helpful during security code review and not to miss any vulnerability  there was some effort to reduce false positives, but before my contribution almost all taint sinks were reported in practice.
->相反的是，FindSecurityBugs 的检测器是为了在安全代码审计中变得更有帮助，以便不要错过任何漏洞，在减少漏洞这块是有一定影响和帮助的，但在我贡献这代码之前，大部分的污染检测仅仅只是停留在报告研究阶段
+>与此不同的是，FindSecurityBugs的一系列检测器是使安全代码审计变得更高效，以便不错过任何漏洞，这些检测器在减少漏洞这块是有一定影响和帮助的，但在我贡献这代码之前，大部分的污染检测仅仅只是停留在报告研究阶段
 
 Unfortunately, searching a real problem among many false warnings is quite tedious.
->遗憾的是，在众多错误警告中寻找一个真正的问题是相当枯燥乏味
+>遗憾的是，在众多错误警告中寻找一个真正的问题是相当得枯燥乏味
 
 The aim of the new detection mechanism is to report more high-confidence bugs (with minimum of false positives) than FindBugs detectors plus report lower-confidence bugs with decreased priority not missing any real bugs while having false positives rate much lower than FindSecurityBugs had originally.
 >新的检测机制能比Findbugs 的检测器检测出更高可信度的bugs同时不错过任何真正的Bugs,也比最初的FindSecurityBugs 降低更多的误报率
 
 For a reliable detection, we need a good data-flow analysis. I have already mentioned OpcodeStackDetector class in previous articles, but there is a more advanced and general mechanism in FindBugs. We can create and register classes performing a custom data-flow analysis and request those results later in detectors.
->为了更可靠的检测，我们需要一个良好的数据流分析方法，我在之前的文章已经提到过OpcodeStackDetector 这个类，但在FindBugs有一个更高级和通用的机制，我们可以创建和注册一个用来执行自定义数据流分析的一个类，并用这些检测器执行检测获得结果
+>为了进行更可靠的检测，我们需要一个良好的数据流分析方法，我在之前的文章已经提到过OpcodeStackDetector 这个类，但在FindBugs有一个更高级和通用的机制，我们可以创建和注册一个用来执行自定义数据流分析的类，并用这些检测器执行检测以便获得结果
 
 Methods are symbolically executed after building control flow graph made of blocks of instructions connected by different types of edges (such as goto, ifcmp or exception handling), which are attempted to be pruned for impossible flow.
 >当指令块被各种不同类型的线（例如goto,ifcmp或exception）连接所构成的控制流图被构建后，方法就会被执行，这些流程图被视为最小可分割块
