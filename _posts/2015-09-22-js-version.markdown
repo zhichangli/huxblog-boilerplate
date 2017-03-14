@@ -13,6 +13,11 @@ tags:
     - Sinks
 ---
 
+[Find-Sec-Bugs](https://github.com/find-sec-bugs/find-sec-bugs)是一款findBugs的插件，专用来对代码进行白盒安全检测，目前国内中文文档不多，因工作需要翻译了一篇，分享下
+
+
+> 作者原链接：[TAINT ANALYSIS ADDED TO FINDBUGS](https://www.ysofters.com/2015/08/31/taint-analysis-added-to-findbugs/)
+
 
 JavaScript 有着很奇怪的命名史。
 
