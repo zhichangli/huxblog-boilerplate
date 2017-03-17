@@ -14,6 +14,7 @@ tags:
 ---
 
 工程源码地址： [Find-Sec-Bugs](https://github.com/find-sec-bugs/find-sec-bugs)
+
 FindSecBugs作为FindBugs的安全扫描扩展部分，同样基于JAVA的字节码对class文件进行扫描检测
 
 > [ 深入JVM字节码执行引擎](http://blog.csdn.net/dd864140130/article/details/49515403)
@@ -73,6 +74,9 @@ FindSecBugs中所有的detector均是用于安全的检测，放在plugin项目�
 下面重点阐述继承BasicInjectionDetector类的检测方式，这种方式由FindSecBugs作者提出，为了实现这种更高效检测的方式
 作者新写了一个分析引擎和用于Detector继承的抽象类，重点关注以下这些类
 
-A:
+A: ![](https://github.com/zhichangli/zhichangli.github.io/blob/master/img/findSecBugs/h3x%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8A%BD%E8%B1%A1detector01.png?raw=true)
+B: ![](https://github.com/zhichangli/zhichangli.github.io/blob/master/img/findSecBugs/h3x%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8A%BD%E8%B1%A1detector02.png?raw=true)
+C: ![](https://github.com/zhichangli/zhichangli.github.io/blob/master/img/findSecBugs/taintanalysis.png?raw=true)
+
 
 
