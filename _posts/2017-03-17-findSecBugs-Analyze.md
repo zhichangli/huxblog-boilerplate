@@ -13,9 +13,9 @@ tags:
     - Sinks
 ---
 
-工程源码地址： [Find-Sec-Bugs](https://github.com/find-sec-bugs/find-sec-bugs)
-
 FindSecBugs作为FindBugs的安全扫描扩展部分，同样基于JAVA的字节码对class文件进行扫描检测
+
+工程源码地址： [Find-Sec-Bugs](https://github.com/find-sec-bugs/find-sec-bugs)
 
 > [ 深入JVM字节码执行引擎](http://blog.csdn.net/dd864140130/article/details/49515403)
 
@@ -77,6 +77,10 @@ FindSecBugs中所有的detector均是用于安全的检测，放在plugin项目�
 A: ![](https://github.com/zhichangli/zhichangli.github.io/blob/master/img/findSecBugs/h3x%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8A%BD%E8%B1%A1detector01.png?raw=true)
 B: ![](https://github.com/zhichangli/zhichangli.github.io/blob/master/img/findSecBugs/h3x%E8%87%AA%E5%AE%9A%E4%B9%89%E6%8A%BD%E8%B1%A1detector02.png?raw=true)
 C: ![](https://github.com/zhichangli/zhichangli.github.io/blob/master/img/findSecBugs/taintanalysis.png?raw=true)
+
+AB归为一部分，为用于被自定义Detector实现的抽象类，C为作者自定义的检测引擎，为了更好解释自定义检测引擎的编码结构，引入下图
+
+> 按理UML图更适合，但允许我任性选择自己喜欢的图形吧，这里约定一下，除了菱形表示函数外，其他都为类，椭圆形为矩形的接口或抽象类
 
 
 
