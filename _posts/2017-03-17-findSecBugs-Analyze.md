@@ -82,5 +82,11 @@ AB归为一部分，为用于被自定义Detector实现的抽象类，C为作者
 
 > 按理UML图更适合，但允许我任性选择自己喜欢的图形吧，这里约定一下，除了菱形表示函数外，其他都为类，椭圆形为矩形的接口或抽象类
 
+D: ![](https://github.com/zhichangli/zhichangli.github.io/blob/master/img/findSecBugs/findSecBugsEngine.png?raw=true)
+
+
+
+
+E: ![](https://github.com/zhichangli/zhichangli.github.io/blob/master/img/findSecBugs/FindSecBugsDetector.png?raw=true)
 
 
