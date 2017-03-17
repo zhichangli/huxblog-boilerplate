@@ -91,7 +91,7 @@ AB归为一部分，为用于被自定义Detector实现的抽象类，C为作者
 这些Taint结果被包装成TaintDataFlow返回
 * 以上，这一系列的Taint*构成了一个全新的检测引擎
 
-> [JVM](https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-6.html)
+> [JVM详解](https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-6.html)
 
 D: ![](https://github.com/zhichangli/zhichangli.github.io/blob/master/img/findSecBugs/findSecBugsEngine.png?raw=true)
 
@@ -103,5 +103,9 @@ E: ![](https://github.com/zhichangli/zhichangli.github.io/blob/master/img/findSe
 当有了以上的概念后，相信再看这篇就很容易理解了 [TAINT ANALYSIS ADDED TO FINDBUGS](https://zhichangli.github.io/zhichangli.github.io/2017/03/14/findSecBugs-translate/)
 
 小结：
+综上所述，FindSecBugs分为两条主线，原FindBugs自有一套检测分析引擎和detector基类，开发者可以直接使用，重写sawOpcode函数编写规则
+而FindSecBugs根据FindBugs的API文档重写了一套针对Injection的检测分析引擎以及detector基类，且这套引擎跟原FindBugs的通用分析引擎相比，是偏向于定制的，针对注入污染分析。
+
+
 
 
