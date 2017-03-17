@@ -100,4 +100,8 @@ D: ![](https://github.com/zhichangli/zhichangli.github.io/blob/master/img/findSe
 
 E: ![](https://github.com/zhichangli/zhichangli.github.io/blob/master/img/findSecBugs/FindSecBugsDetector.png?raw=true)
 
+当有了以上的概念后，相信再看这篇就很容易理解了 [TAINT ANALYSIS ADDED TO FINDBUGS](https://zhichangli.github.io/zhichangli.github.io/2017/03/14/findSecBugs-translate/)
+
+小结：
+
 
