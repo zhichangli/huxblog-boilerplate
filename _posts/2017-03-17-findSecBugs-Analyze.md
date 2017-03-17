@@ -82,6 +82,15 @@ AB归为一部分，为用于被自定义Detector实现的抽象类，C为作者
 
 > 按理UML图更适合，但允许我任性选择自己喜欢的图形吧，这里约定一下，除了菱形表示函数外，其他都为类，椭圆形为矩形的接口或抽象类
 
+* New 一个EngineRegistrar实现IAnalysisEngineRegistrar(edu)用来注册一个污染检测引擎TaintDataflowEngine
+* TaintDataflowEngine实现IMethodAnalysisEngine(edu)接口,这里主要关注分析的方法analyze(IAnalysisCache cache, MethodDescriptor descriptor)
+* analyze返回TaintDataflow，其中进行实际分析的工作的是TaintAnalysis类
+* TaintAnalysis类继承FrameDataflowAnalysis(edu)，关注其中的visitor变量，该变量为TaintFrameModelingVisitor的实例
+* TaintFrameModelingVisitor是真正以观察者模型进行分析的实施类，继承AbstractFrameModelingVisitor(edu)，关注TaintFrameModelingVisitor中的visitLDC(),visitLDC2_M(),visitSIPUSH()等系列方法，这些方法具体访问的字节码可参与JVM相关资料
+> [JVM](https://docs.oracle.com/javase/specs/jvms/se7/html/jvms-6.html)
+* 看代码时会发现TaintDataFlow,TaintFrame,Taint这三个对象在以上所涉及到类中的各函数间流转，最终引擎返回的结果是TaintDataFlow对象，这三者的关系是TaintAnalysis检测TaintFrame得到一系列Taint结果，
+这些Taint结果被包装成TaintDataFlow返回
+* 以上，这一系列的Taint*构成了一个全新的检测引擎
 D: ![](https://github.com/zhichangli/zhichangli.github.io/blob/master/img/findSecBugs/findSecBugsEngine.png?raw=true)
 
 
