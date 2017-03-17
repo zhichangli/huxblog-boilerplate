@@ -95,8 +95,8 @@ AB归为一部分，为用于被自定义Detector实现的抽象类，C为作者
 
 D: ![](https://github.com/zhichangli/zhichangli.github.io/blob/master/img/findSecBugs/findSecBugsEngine.png?raw=true)
 
-
-
+* CrlfLogInjectionDetector 继承于 BasicInjectionDetector 继承于 AbstractInjectionDetector 继承于 AbstractTaintDetector 实现 Detector(由FindBugs edu提供)
+* AbstractTaintDetector中通过调用上面提到的作者新建的解析引擎进而获得TaintDataflow结果返回用于分析
 
 E: ![](https://github.com/zhichangli/zhichangli.github.io/blob/master/img/findSecBugs/FindSecBugsDetector.png?raw=true)
 
